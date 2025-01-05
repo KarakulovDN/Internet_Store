@@ -48,3 +48,4 @@ if __name__ == "__main__":
 
     print(Category.category_count)
     print(Category.product_count)
+    print("шляпа 0x000002BC54549070")
