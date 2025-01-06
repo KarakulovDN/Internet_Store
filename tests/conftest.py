@@ -32,8 +32,8 @@ def category_smart() -> Any:
         name="Смартфоны",
         description="Смартфоны, как средство не только коммуникации, но и"
                     " получения дополнительных функций для удобства жизни",
-        products=["Samsung Galaxy S23 Ultra", "Iphone 15", "Xiaomi Redmi"
-                                                           " Note 11"]
+        products=["Samsung Galaxy S23 Ultra", "Iphone 15",
+                  "Xiaomi Redmi Note 11"]
     )
 
 
