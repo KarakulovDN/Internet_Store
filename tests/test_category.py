@@ -42,3 +42,4 @@ def test_product_tv(product_tv) -> Any:
     assert product_tv.description == "Фоновая подсветка"
     assert product_tv.price == 123000.0
     assert product_tv.quantity == 7
+
