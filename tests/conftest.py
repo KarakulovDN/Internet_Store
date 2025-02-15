@@ -45,3 +45,53 @@ def category_tv() -> Any:
                     " просмотром, станет вашим другом и помощником",
         products=["Samsung", "Xiaomi", "Toshiba"]
     )
+
+
+@pytest.fixture
+def product1_fixture() -> Product:
+    """Фикстура для тестирования инициализации экземпляров класса Product."""
+    return Product(name="Молоко", description="Молоко коровье 3%", price=500.00, quantity=5)
+
+
+@pytest.fixture
+def product2_fixture() -> Product:
+    """Фикстура для тестирования инициализации экземпляров класса Product."""
+    return Product(name="Хлеб", description="Хлеб белый стандартный", price=100.00, quantity=3)
+
+
+@pytest.fixture
+def product3_fixture() -> Product:
+    """Фикстура для тестирования инициализации экземпляров класса Product."""
+    return Product(name="Яйца", description="Яйца 1С", price=500.00, quantity=2)
+
+
+@pytest.fixture
+def product4_fixture() -> Product:
+    """Фикстура для тестирования инициализации экземпляров класса Product."""
+    return Product(name="Шорты", description="Шорты мужские, размер 50", price=5000.00, quantity=2)
+
+
+@pytest.fixture
+def params_fixture() -> dict:
+    """Фикстура для метода new_product класса Product."""
+    return {
+        "name": "Яйца",
+        "description": "Яйца 1С",
+        "price": 500.0,
+        "quantity": 1,
+    }
+
+
+@pytest.fixture
+def smartphone_params_fixture() -> dict:
+    """Фикстура для создания нового экземпляра методом new_product."""
+    return {
+        "name": "Samsung Galaxy S23 Ultra",
+        "description": "256GB, Серый цвет, 200MP камера",
+        "price": 180000.0,
+        "quantity": 5,
+        "efficiency": 95.5,
+        "model": "S23 Ultra",
+        "memory": 256,
+        "color": "Серый",
+    }
