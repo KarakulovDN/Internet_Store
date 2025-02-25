@@ -62,8 +62,8 @@ class Category:
         products_list = []
         for product in self.__products:
             products_list.append(f"{str(product)}")  # Строковое представление продукта реализовано в классе Product
-
-        return products_list
+        my_string = ", ".join(products_list)
+        return my_string
 
     def get_average_product_price(self) -> float | Any:
         """Метод вычисляет среднюю цену всех товаров в категории. Если в категории нет товаров, то возвращает 0."""
