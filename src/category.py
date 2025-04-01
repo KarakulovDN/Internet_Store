@@ -28,7 +28,9 @@ class Category:
 
     def __str__(self: Self) -> str:
         # Название категории, количество продуктов: 200 шт.
-        return f"{self.name}, количество продуктов: {self.product_count} шт."
+        total_quantity = sum(product.quantity for product in self.__products)
+        return (f"В категории \"{self.name}\" -  {self.product_count} продукта."
+                f" общим количеством: {total_quantity} шт.")
 
     # Реализуем метод для добавления товаров
     def add_product(self, product: Product) -> None:

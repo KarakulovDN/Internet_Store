@@ -38,6 +38,7 @@ class Product(BaseProduct, PrintMixin):
 
     def __str__(self) -> str:
         """Строковое представление экземпляра класса."""
+        # Название продукта, 80 руб. Остаток: 15 шт.
         return f"{self.name}, {self.price} руб. Остаток: {self.quantity} шт."
 
     def __add__(self: Self, other: Any) -> float | Any:
