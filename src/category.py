@@ -76,81 +76,81 @@ class Category:
 
 
 # -----------------------------------------------------------------------------
-if __name__ == "__main__":
-    print("Инициализация категории с пустым списком продуктов")
-    category0 = Category(
-        name="Пылесосы",
-        description="Техника для дома",
-    )
-    print(category0.name)
-    print(category0.description)
-    print(category0.products)
-    print(category0.category_count)
-    print(category0.product_count)
-    print()
-
-    print("Инициализация категории 1")
-    category1 = Category(
-        name="Продукты",
-        description="Товары первой необходимости",
-        products=[
-            Product("Молоко", "Молоко коровье 3%", 500.00, 5),
-            Product("Хлеб", "Хлеб белый стандартный", 100.00, 3),
-            Product("Яйца", "Яйца 1С", 500.00, 2),
-        ],
-    )
-    print(category1.name)
-    print(category1.description)
-    print(category1.category_count)
-    print(category1.product_count)
-    print()
-
-    print("Добавление продукта в список продуктов")
-    category1.add_product(Product("Молоко", "Молоко коровье 3%", 500.00, 1))
-    print(category1.description)
-    print(category1.category_count)
-    print(category1.product_count)
-    print()
-
-    print("Проверка работы геттера")
-    print(category1.products)
-    print()
-
-    print("Проверка строкового представления экземпляра класса")
-    print(category1)
-    print()
-
-    print("Инициализация категории 2")
-    category2 = Category(
-        name="Одежда",
-        description="Товары широкого потребления",
-        products=[
-            Product("Шорты", "Шорты мужские, размер 50", 5000.00, 2),
-        ],
-    )
-    print(category2.name)
-    print(category2.description)
-    print(category2.category_count)
-    print(category2.product_count)
-    print()
-
-    print("Проверка работы геттера для категории 1")
-    print(category1.products)
-    print()
-
-    print("Проверка строкового представления экземпляра класса категории 1")
-    print(category1)
-    print()
-
-    print("Проверка работы геттера для категории 2")
-    print(category2.products)
-    print()
-
-    print("Проверка строкового представления экземпляра класса категории 2")
-    print(category2)
-    print()
-
-    print("Проверка метода подсчёта средней цены всех товаров в категории")
-    print("Средняя цена для категории {} = {}".format(category0, category0.get_average_product_price()))
-    print("Средняя цена для категории {} = {}".format(category1, category1.get_average_product_price()))
-    print("Средняя цена для категории {} = {}".format(category2, category2.get_average_product_price()))
+# if __name__ == "__main__":
+#     print("Инициализация категории с пустым списком продуктов")
+#     category0 = Category(
+#         name="Пылесосы",
+#         description="Техника для дома",
+#     )
+#     print(category0.name)
+#     print(category0.description)
+#     print(category0.products)
+#     print(category0.category_count)
+#     print(category0.product_count)
+#     print()
+#
+#     print("Инициализация категории 1")
+#     category1 = Category(
+#         name="Продукты",
+#         description="Товары первой необходимости",
+#         products=[
+#             Product("Молоко", "Молоко коровье 3%", 500.00, 5),
+#             Product("Хлеб", "Хлеб белый стандартный", 100.00, 3),
+#             Product("Яйца", "Яйца 1С", 500.00, 2),
+#         ],
+#     )
+#     print(category1.name)
+#     print(category1.description)
+#     print(category1.category_count)
+#     print(category1.product_count)
+#     print()
+#
+#     print("Добавление продукта в список продуктов")
+#     category1.add_product(Product("Молоко", "Молоко коровье 3%", 500.00, 1))
+#     print(category1.description)
+#     print(category1.category_count)
+#     print(category1.product_count)
+#     print()
+#
+#     print("Проверка работы геттера")
+#     print(category1.products)
+#     print()
+#
+#     print("Проверка строкового представления экземпляра класса")
+#     print(category1)
+#     print()
+#
+#     print("Инициализация категории 2")
+#     category2 = Category(
+#         name="Одежда",
+#         description="Товары широкого потребления",
+#         products=[
+#             Product("Шорты", "Шорты мужские, размер 50", 5000.00, 2),
+#         ],
+#     )
+#     print(category2.name)
+#     print(category2.description)
+#     print(category2.category_count)
+#     print(category2.product_count)
+#     print()
+#
+#     print("Проверка работы геттера для категории 1")
+#     print(category1.products)
+#     print()
+#
+#     print("Проверка строкового представления экземпляра класса категории 1")
+#     print(category1)
+#     print()
+#
+#     print("Проверка работы геттера для категории 2")
+#     print(category2.products)
+#     print()
+#
+#     print("Проверка строкового представления экземпляра класса категории 2")
+#     print(category2)
+#     print()
+#
+#     print("Проверка метода подсчёта средней цены всех товаров в категории")
+#     print("Средняя цена для категории {} = {}".format(category0, category0.get_average_product_price()))
+#     print("Средняя цена для категории {} = {}".format(category1, category1.get_average_product_price()))
+#     print("Средняя цена для категории {} = {}".format(category2, category2.get_average_product_price()))
