@@ -75,3 +75,30 @@ def test_products_property_empty() -> None:
     """Проверяем работу геттера когда список продуктов пустой."""
     category = Category(name="Книги", description="Книги всех жанров")
     assert category.products == ''
+
+
+def test_products_property_empty() -> None:
+    """Проверяем работу геттера когда список продуктов пустой."""
+    category = Category(name="Книги", description="Книги всех жанров")
+    assert category.products == ''
+
+
+def test_category_str(category1_fixture: Category) -> None:
+    """Тест для проверки метода __str__ класса Category."""
+    assert str(category1_fixture) == "В категории \"Продукты\" -  3 продукта. общим количеством: 10 шт."
+
+
+def test_middle_price(
+    product1_fixture: Product, product2_fixture: Product, product3_fixture: Product
+) -> None:
+    """Тест на вычисление средней цены в категории."""
+    test_category = Category(
+        name="Продукты",
+        description="Товары первой необходимости",
+        products=[
+            product1_fixture,
+            product2_fixture,
+            product3_fixture,
+        ],
+    )
+    assert test_category.middle_price() == 366.67

@@ -95,3 +95,15 @@ def smartphone_params_fixture() -> dict:
         "memory": 256,
         "color": "Серый",
     }
+@pytest.fixture
+def category1_fixture() -> Category:
+    """Фикстура для тестирования инициализации экземпляров класса Category."""
+    return Category(
+        name="Продукты",
+        description="Товары первой необходимости",
+        products=[
+            Product("Молоко", "Молоко коровье 3%", 500.00, 5),
+            Product("Хлеб", "Хлеб белый стандартный", 100.00, 3),
+            Product("Яйца", "Яйца 1С", 500.00, 2),
+        ],
+    )

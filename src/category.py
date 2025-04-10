@@ -67,7 +67,7 @@ class Category:
         my_string = ", ".join(products_list)
         return my_string
 
-    def get_average_product_price(self) -> float | Any:
+    def middle_price(self) -> float | Any:
         """Метод вычисляет среднюю цену всех товаров в категории. Если в категории нет товаров, то возвращает 0."""
         try:
             return round(sum([_product.price for _product in self.__products]) / len(self.__products), 2)
@@ -75,7 +75,7 @@ class Category:
             return 0
 
 
-# -----------------------------------------------------------------------------
+#
 # if __name__ == "__main__":
 #     print("Инициализация категории с пустым списком продуктов")
 #     category0 = Category(
@@ -151,6 +151,6 @@ class Category:
 #     print()
 #
 #     print("Проверка метода подсчёта средней цены всех товаров в категории")
-#     print("Средняя цена для категории {} = {}".format(category0, category0.get_average_product_price()))
-#     print("Средняя цена для категории {} = {}".format(category1, category1.get_average_product_price()))
-#     print("Средняя цена для категории {} = {}".format(category2, category2.get_average_product_price()))
+#     print("Средняя цена для категории {} = {}".format(category0, category0.middle_price()))
+#     print("Средняя цена для категории {} = {}".format(category1, category1.middle_price()))
+#     print("Средняя цена для категории {} = {}".format(category2, category2.middle_price()))
